@@ -56,6 +56,7 @@ class GitManager(object):
 
     def last_rev(self, page):
         path = self._get_blob_path(page.path)
+        if not path: return
         logs = self.repository.git.log('--format=%an %ad|%h', '--date=relative',
                                       path).split('\n')
 
