@@ -478,7 +478,7 @@ class Wiki(object):
         os.remove(path)
         return True
 
-    @cache.memoize(timeout=300)
+    @cache.memoize()
     def index(self, attr=None, prefix=None, tree=True):
         def _walk(directory, path_prefix=()):
             for name in os.listdir(directory):
