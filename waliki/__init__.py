@@ -301,7 +301,7 @@ class RawHandler(Markup):
 class Plaintext(Markup):
     NAME = 'plaintext'
     META_LINE = ''
-    EXTENSION = ['.txt']
+    EXTENSION = ['.txt', '.org', '.muse']
     HOWTO = """
         This editor is plaintext.
         """
